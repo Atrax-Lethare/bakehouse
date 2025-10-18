@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Glass Bakehouse</title>
+    <link rel="stylesheet" href="proto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="offer-bar">
+        <span>50% off on first order from website.</span>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img src="Logo.png" alt="logo" id="logo">
+                <a href="#" class="logo">The Rose Bakehouse</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">About Us ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Services ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Catering</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Classes</a></li>
+                        </ul>
+                    </li>
+                     <li class="dropdown">
+                        <a href="#">Contact ▼</a>
+                         <ul class="dropdown-menu">
+                            <li><a href="#">Locations</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/513635/shopping-cart.png" alt="Cart"/></a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="sub-navbar">
+            <a href="#">Cakes</a>
+            <a href="#">Cookies</a>
+            <a href="#">Pastries</a>
+            <a href="#">Breads</a>
+        </nav>
+
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for delicacies...">
+            <div id="suggestions-box" class="suggestions-box"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner-section">
+            <div class="banner-content">
+                <h1>Crafted with Passion, Baked to Perfection</h1>
+                <p>Discover our artisanal treats, made daily with the finest ingredients.</p>
+                <a href="#" class="btn-primary">Explore Our Menu</a>
+            </div>
+        </section>
+
+        <section class="description-section">
+            <div class="description-content glass-card">
+                <h2>Welcome to The Rose Bakehouse</h2>
+                <p>Founded in 2025, The Rose Bakehouse is a haven for lovers of fine baked goods. Our philosophy is simple: use high-quality ingredients, traditional techniques, and a touch of modern creativity to craft unforgettable experiences. Every loaf, pastry, and cake tells a story of dedication and love for the art of baking.</p>
+            </div>
+        </section>
+
+        <section class="product-section">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card glass-card">
+                    <img src="velvet-chocolate-cake.jpg" alt="Chocolate Cake">
+                    <h3>Velvet Chocolate Cake</h3>
+                    <p class="description">Rich, moist chocolate layers with a smooth ganache.</p>
+                    <div class="product-info">
+                        <span class="price">₹2000.00</span>
+                        <span class="sold">Sold: 1,204</span>
+                    </div>
+                    <a href="#" class="btn-secondary">View Details</a>
+                </div>
+
+                <div class="product-card glass-card">
+                    <img src="croissant.jpg" alt="Croissants">
+                    <h3>Buttery Croissants</h3>
+                    <p class="description">Flaky, airy, and perfect with your morning coffee.</p>
+                     <div class="product-info">
+                        <span class="price">₹400.00</span>
+                        <span class="sold">Sold: 3,489</span>
+                    </div>
+                    <a href="#" class="btn-secondary">View Details</a>
+                </div>
+
+                <div class="product-card glass-card">
+                    <img src="cookies.jpg">
+                    <h3>Assorted Cookies</h3>
+                    <p class="description">A delightful mix of our classic cookie selection.</p>
+                     <div class="product-info">
+                        <span class="price">₹1000.00</span>
+                        <span class="sold">Sold: 2,156</span>
+                    </div>
+
+                    <a href="#" class="btn-secondary">View Details</a>
+                </div>
+            </div>
+            <a href="#" class="btn-primary view-more-btn">View More</a>
+        </section>
+
+        <section class="product-section">
+            <h2>Our Best Sellers</h2>
+            <div class="product-grid">
+                 <div class="product-card glass-card">
+                    <img src="strawberry_pastry.jpg" alt="Strawberry Pastry">
+                    <h3>Strawberry Dream Pastry</h3>
+                    <p class="description">Light sponge with fresh cream and sweet strawberries.</p>
+                     <div class="product-info">
+                        <span class="price">₹500.00</span>
+                        <span class="sold">Sold: 5,831</span>
+                    </div>
+                    <a href="#" class="btn-secondary">View Details</a>
+                </div>
+                 <div class="product-card glass-card">
+                    <img src="sourdough.jpg" alt="Sourdough Bread">
+                    <h3>Artisanal Sourdough</h3>
+                    <p class="description">Naturally leavened with a crisp crust and soft crumb.</p>
+                     <div class="product-info">
+                        <span class="price">₹800.00</span>
+                        <span class="sold">Sold: 4,102</span>
+                    </div>
+                    <a href="#" class="btn-secondary">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+             <h2>Special Services</h2>
+             <div class="services-grid">
+                <div class="service-card glass-card">
+                    <img src="https://img.icons8.com/fluency-systems-regular/96/513635/present.png" alt="Custom Packaging Icon"/>
+                    <h3>Custom Packaging</h3>
+                    <p>Beautiful, personalized packaging for gifts and special occasions.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <img src="https://img.icons8.com/fluency-systems-regular/96/513635/cake.png" alt="Custom Shapes Icon"/>
+                    <h3>Custom Shapes & Designs</h3>
+                    <p>Bring your vision to life with custom-designed cakes and treats.</p>
+                </div>
+             </div>
+        </section>
+
+        <section class="testimonial-section">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-slider" id="testimonial-slider">
+                <div class="testimonial-track" id="testimonial-track">
+                    <div class="testimonial-card glass-card">
+                        <p>"The best sourdough in town! The crust is absolutely perfect. This place is a hidden gem."</p>
+                        <h4>- Alex Johnson</h4>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <p>"I ordered a custom birthday cake, and it exceeded all my expectations. It was beautiful and delicious!"</p>
+                        <h4>- Samantha Lee</h4>
+                    </div>
+                    <div class="testimonial-card glass-card">
+                        <p>"The croissants are life-changing. Flaky, buttery, and just melt in your mouth. A must-try!"</p>
+                        <h4>- Michael Chen</h4>
+                    </div>
+                     <div class="testimonial-card glass-card">
+                        <p>"Excellent customer service and even better pastries. The staff is always so friendly and helpful."</p>
+                        <h4>- Emily Rodriguez</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>The Rose Bakehouse</h3>
+                <p>123 Bakery Lane, Pastryville, 12345</p>
+                <p>Email: contact@rosebakehouse.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <div class="social-links">
+                     <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/513635/instagram-new.png" alt="Instagram"/></a>
+                     <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/513635/facebook-new.png" alt="Facebook"/></a>
+                     <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/513635/twitter.png" alt="Twitter"/></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Get in Touch</h3>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Rose Bakehouse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="proto.js"></script>
+</body>
+</html>

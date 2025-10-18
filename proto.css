@@ -1,0 +1,455 @@
+/* --- CSS Variables and Global Styles --- */
+:root {
+    --accent-color: #D68283;
+    --text-color: #513635;
+    --highlight-color: #D2AF74;
+    --bg-color: #E0DED6;
+    --secondary-tone: #AFA58B;
+    --glass-bg: rgba(224, 222, 214, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: rgba(81, 54, 53, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Reusable Components --- */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px var(--glass-shadow);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(81, 54, 53, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c96f70;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--secondary-tone);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-tone);
+    color: white;
+}
+
+section {
+    padding: 4rem 8%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/* --- Header & Navigation --- */
+.offer-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    z-index: 1000;
+}
+
+.main-header {
+    padding-top: 40px; /* Space for offer-bar */
+    background: rgba(224, 222, 214, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* position: sticky; */
+    top: 40px;
+    z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--glass-bg);
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 4px 30px var(--glass-shadow);
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 15px;
+    display: block;
+}
+
+.nav-icons {
+    margin-left: 2rem;
+}
+.nav-icons img {
+    width: 24px;
+    height: auto;
+}
+
+.sub-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--secondary-tone);
+    border-bottom: 1px solid var(--secondary-tone);
+}
+
+.sub-navbar a {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.sub-navbar a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Search Bar --- */
+.search-container {
+    padding: 1.5rem 8%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar {
+    width: 90%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-tone);
+    background-color: #fff;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.432) 0px 8px 6px -1px;
+}
+
+.suggestions-box {
+    display: none;
+    position: absolute;
+    width: calc(100% - 16%); /* Match container padding */
+    left: 8%;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 998;
+}
+
+.suggestions-box div {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.suggestions-box div:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Banner Section --- */
+.banner-section {
+    height: 60vh;
+    background: url('cake_banner.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Description Section --- */
+.description-section .description-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Product Sections --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-card {
+    text-align: left;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    /* object-fit: cover; */
+    border-radius: 20px;
+    object-fit: fill;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.product-card .description {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    min-height: 45px;
+    margin-bottom: 1rem;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.product-card .price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+}
+
+.product-card .sold {
+    font-size: 0.8rem;
+    background: var(--bg-color);
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.view-more-btn {
+    margin-top: 2rem;
+}
+
+/* --- Services Section --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.service-card img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: invert(20%) sepia(10%) saturate(800%) hue-rotate(350deg) brightness(85%) contrast(85%);
+}
+
+/* --- Testimonials Section --- */
+.testimonial-slider {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: move;
+}
+
+.testimonial-track {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.testimonial-card {
+    flex: 0 0 300px; /* Each card has a fixed width */
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #D2AF74 solid 1px;
+    /* box-shadow: black ; */
+}
+
+.testimonial-card h4 {
+    margin-top: 1rem;
+    color: var(--highlight-color);
+}
+
+/* --- Footer --- */
+.footer-section {
+    background-color: #d1c9b8;
+    padding: 4rem 8% 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin-right: 1rem;
+}
+
+.social-links img {
+    width: 24px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-tone);
+    background: var(--bg-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--secondary-tone);
+}
+
+#logo {
+    height: 10em;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links, .nav-icons {
+        display: none; /* Simplified for example; requires JS for hamburger menu */
+    }
+    
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    
+    section {
+        padding: 3rem 5%;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        flex: 0 0 80%; /* Make cards wider on mobile */
+    }
+}
